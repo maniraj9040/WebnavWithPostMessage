@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Chat Bot</title>
+<meta charset="utf-8"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../static/welcome.js"></script>
+<link rel="stylesheet" type="text/css" href='../static/welcome.css'>
+
+</head>
+
+
+<body>
+
+    <h1>This is Home page</h1> 
+
+    <div class="chatImgWrapper ahaAxisBox"> 
+        <a href="javascript:void(0)" title="ChatBot"> 
+            <img alt="ChatBot" id="openChatBtn" src="../static/chaticon.png"> 
+        </a>
+    </div>
+
+    <div class="divIframeChat" style="display: block;"> 
+        <span class="close"></span>
+        <iframe src=" https://2c0c05f3.ngrok.io/nav/chatopen" id="chatbot" frameborder="0" scrolling="no" allow="microphone; geolocation" style="display: none;border: 1000px;" title="Axis ChatBot" ></iframe>
+    </div>
+
+</body>
+</html>

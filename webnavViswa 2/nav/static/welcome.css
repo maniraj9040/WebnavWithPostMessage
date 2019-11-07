@@ -1,0 +1,70 @@
+        .ahaAxisBox {
+            right: 4% !important;
+            top: inherit !important;
+        }
+        
+        .chatImgWrapper {
+            width: 60px;
+            position: fixed;
+            bottom: 50px;
+            right: 55px;
+            margin: 0;
+            z-index: 9;
+            cursor: pointer;
+        }
+        
+        .divIframeChat {
+            width: 34%;
+            right: 3%;
+            bottom: 4%;
+            height: 100%;
+            z-index: 99999;
+        }
+        
+        #chatbot {
+            bottom: 10px;
+            width: 360px !important;
+            height: 76%;
+            right: 5px;
+            max-height: 460px;
+            min-height: 191px;
+            position: fixed;
+        }
+        
+        .chatbotContainer {
+            width: 360px !important;
+            height: 76%;
+            right: 3%;
+            bottom: 4%;
+            max-height: 460px;
+            min-height: 191px;
+            position: fixed;
+            z-index: 99999;
+        }
+        
+        .close {
+            top: 19px;
+            right: 20px;
+            position: absolute;
+            font-size: 32px;
+            opacity: 1;
+            color: #000;
+            z-index: 99999;
+            width: 22px;
+            height: 22px;
+        }
+        
+        body {
+            background-color: antiquewhite;
+        }
+        
+        .closingchat {
+            width: 60px;
+            position: fixed;
+            bottom: 67%;
+            right: 2%;
+            margin: 0;
+            z-index: 9;
+            cursor: pointer;
+            display: none;
+        }

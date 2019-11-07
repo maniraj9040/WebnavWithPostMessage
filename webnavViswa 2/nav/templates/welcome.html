@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chat Bot</title>
+    <meta charset="utf-8" />
+
+    <!-- Loading  JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+
+
+    <script src="../static/welcome.js"></script>
+    <!-- <script src="../static/resizeAndDrag.js"></script> -->
+
+
+    <!-- Loading css -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href='../static/welcome.css'>
+
+</head>
+
+<body>
+
+    <h1>This is Home page</h1>
+
+    <footer>
+
+        <div class="chatImgWrapper ahaAxisBox">
+            <a href="javascript:void(0)" title="ChatBot">
+                <img alt="ChatBot" id="openChatBtn" src="../static/chaticon.png">
+            </a>
+        </div>
+
+        <!-- <div class="closingchat" style="display: none;">
+            <a href="javascript:void(0)" title="chatclose">
+                <img alt="ChatBot" id="openChatBtn" src="../static/closechat.gif">
+            </a>
+        </div> -->
+
+        <div class="divIframeChat" style="display: block;">
+            <h1>This is iframe div</h1>
+            <span class="close"></span>
+            <iframe src="http://127.0.0.1:5000/nav/chatopen" id="chatbot" frameborder="0" scrolling="no" allow="microphone; geolocation" style="display: none;border: 1000px;" title="Osi ChatBot"></iframe>
+        </div>
+
+    </footer>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            console.log(JSON.stringify(event))
+            console.log(event.source)
+            console.log(event.data)
+            console.log(event.origin)
+
+            if (event.data == "chat closing") {
+                $('.divIframeChat,.divIframeChat .close').fadeOut(500);
+
+                $('.closingchat').fadeOut(500);
+
+                $('.chatImgWrapper').fadeIn(500);
+            }
+        })
+    </script>
+
+</body>
+
+</html>
